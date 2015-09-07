@@ -16,16 +16,15 @@ console.log "#{__dirname}/views"
 
 render = views(
   "#{__dirname}/views",
-  map: {html: 'lodash'}
+  map: {html: 'swig'}
 )
 
 # require('util').inspect render, {depth: 4}
 # app.use views
 #
-console.log 'cron test'
 test = ->
   console.log 12313123131231313
-  this.body = yield render 'index'
+  this.body = yield render 'index', {name: 'Koa'}
 app.use route.get '/', test
 
 
