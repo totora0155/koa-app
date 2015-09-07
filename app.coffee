@@ -22,6 +22,7 @@ render = views(
 # require('util').inspect render, {depth: 4}
 # app.use views
 #
+console.log 'cron test'
 test = ->
   console.log 12313123131231313
   this.body = yield render 'index'
